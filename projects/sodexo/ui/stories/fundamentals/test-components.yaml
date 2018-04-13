@@ -19,7 +19,21 @@ data:
         Granularity: Monthly
         Metrics: Deposit
         StartTime: '2014-4-14T00:00:00Z'
-
+  bestUser:
+    department: STC
+    discipline: SDE
+  branchSelector:
+    enums:
+      - 汇总
+      - 员工餐厅
+      - 粤菜餐厅
+      - 北京小院
+      - 咖啡厅
+      - 咖啡屋
+      - 咖喱屋
+      - 自助餐厅
+      - 西餐厅
+      - 意大利餐厅
 # Dashboard Layout
 layout:
   id: 9850ccd3-b5f9-4b96-afe7-e3650964cbe4
@@ -31,3 +45,9 @@ layout:
       - id: f4f1f881-adba-4300-b1f6-4bb14658359a
         type: ActiveDays
         input: testData
+      - id: 131e8217-1547-514a-8644-171d5252bfce
+        type: BestUser
+        input: bestUser
+      - id: 2d3433a9-71b4-59ab-9547-5ac98c86f945
+        type: MultiSelector
+        input: branchSelector

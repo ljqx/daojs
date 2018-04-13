@@ -4,7 +4,6 @@ import TimeSeries from './components/time-series';
 import FormInput from './components/form-input';
 import FormField from './components/form-field';
 import Heatmap from './components/heatmap';
-import MultiSelector from './components/multi-selector';
 // import Cell from './components/cell';
 import SectionContainer from './components/section-container';
 import Donut from './components/donut';
@@ -23,6 +22,7 @@ import CellTest from './components/cell-test';
 
 import Bar from './components/bar';
 import HorizontalBar from './components/horizontal-bar';
+import MultiSelector from './components/multi-selector';
 import RadioGroup from './components/radio-group';
 import Select from './components/select';
 import SingleSelector from './components/single-selector';
@@ -36,7 +36,6 @@ export default {
   FormField,
   Heatmap,
   // Cell,
-  MultiSelector,
   SectionContainer,
   Donut,
   LineWithDataZoom,
@@ -54,6 +53,7 @@ export default {
 
   Bar,
   HorizontalBar,
+  MultiSelector,
   RadioGroup,
   Select,
   SingleSelector,

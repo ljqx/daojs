@@ -8,10 +8,8 @@ const { Option } = Select;
 export default class MultiSelector extends Component {
   componentDidUpdate() {
     const {
-      value: {
-        defaultValue,
-        enums,
-      },
+      defaultValue,
+      enums,
       currentValue,
     } = this.props;
     if (enums.length > 0) {
@@ -37,7 +35,7 @@ export default class MultiSelector extends Component {
     const {
       defaultValue,
       enums,
-    } = this.props.value;
+    } = this.props;
     const opts = _.map(enums, item => ({ value: item.value || item, text: item.text || item }));
 
     const selector = enums.length > 0 ? (
@@ -62,7 +60,8 @@ export default class MultiSelector extends Component {
 
 MultiSelector.propTypes = {
   label: PropTypes.string,
-  value: PropTypes.objectOf(PropTypes.any),
+  defaultValue: PropTypes.arrayOf(PropTypes.string),
+  enums: PropTypes.arrayOf(PropTypes.string),
   currentValue: PropTypes.arrayOf(PropTypes.string),
   update: PropTypes.func,
 };
@@ -70,6 +69,7 @@ MultiSelector.propTypes = {
 MultiSelector.defaultProps = {
   label: '',
   update: _.noop,
-  value: { defaultValue: [], enums: [] },
+  defaultValue: [],
+  enums: [],
   currentValue: undefined,
 };
